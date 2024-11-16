@@ -1,0 +1,15 @@
+def filtriraj_parne_brojeve(lista):
+    # Koristimo list comprehension za filtriranje parnih brojeva
+    return [broj for broj in lista if broj % 2 == 0]
+
+# Primjer korištenja funkcije
+originalna_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+parni_brojevi = filtriraj_parne_brojeve(originalna_lista)
+
+print(parni_brojevi)  # Ispis: [2, 4, 6, 8, 10]
+
+
+terminal
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+[2, 4, 6, 8, 10]
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> 
