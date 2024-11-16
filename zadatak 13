@@ -1,0 +1,59 @@
+def prvi_i_zadnji(lista):
+    return (lista[0], lista[-1]) if lista else None  # Provjerava da lista nije prazna
+
+# Primjer korištenja:
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(prvi_i_zadnji(lista))  # Ispis: (1, 10)
+
+def maks_i_min(lista):
+    # Inicijalizacija za maksimalni i minimalni element
+    if not lista:
+        return None, None
+    
+    max_elem = lista[0]
+    min_elem = lista[0]
+    
+    for num in lista:
+        if num > max_elem:
+            max_elem = num
+        if num < min_elem:
+            min_elem = num
+    
+    return (max_elem, min_elem)
+
+# Primjer korištenja:
+lista = [5, 10, 20, 50, 100, 11, 250, 50, 80]
+print(maks_i_min(lista))  # Ispis: (250, 5)
+
+def maks_i_min(lista):
+    # Inicijalizacija za maksimalni i minimalni element
+    if not lista:
+        return None, None
+    
+    max_elem = lista[0]
+    min_elem = lista[0]
+    
+    for num in lista:
+        if num > max_elem:
+            max_elem = num
+        if num < min_elem:
+            min_elem = num
+    
+    return (max_elem, min_elem)
+
+# Primjer korištenja:
+lista = [5, 10, 20, 50, 100, 11, 250, 50, 80]
+print(maks_i_min(lista))  # Ispis: (250, 5)
+
+
+
+terminal
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+(1, 10)
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+(1, 10)
+(250, 5)
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+(1, 10)
+(250, 5)
+(250, 5)
