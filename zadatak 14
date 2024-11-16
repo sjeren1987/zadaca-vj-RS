@@ -1,1 +1,40 @@
+import math
 
+def isPrime(n):
+    # Brojevi manji ili jednaki 1 nisu prosti
+    if n <= 1:
+        return False
+    # 2 je jedini paran prost broj
+    if n == 2:
+        return True
+    # Parni brojevi osim 2 nisu prosti
+    if n % 2 == 0:
+        return False
+    # Provjera djeljivosti za brojeve od 3 do sqrt(n)
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        if n % i == 0:
+            return False
+    # Ako n nije djeljiv ni s jednim brojem, onda je prost
+    return True
+
+# Primjeri korištenja:
+print(isPrime(1))  # False
+print(isPrime(2))  # True
+print(isPrime(3))  # True
+print(isPrime(4))  # False
+print(isPrime(29)) # True
+print(isPrime(50)) # False
+
+
+TERMINAL
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+(1, 10)
+(250, 5)
+(250, 5)
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+False
+True
+True
+False
+True
+False
