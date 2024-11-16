@@ -1,0 +1,19 @@
+def obrni_rjecnik(rjecnik):
+   
+    obrnut_rjecnik = {}
+    
+    # Prolazimo kroz sve stavke u originalnom rječniku
+    for ključ, vrijednost in rjecnik.items():
+        # Zamijenjujemo ključ i vrijednost
+        obrnut_rjecnik[vrijednost] = ključ
+    
+    return obrnut_rjecnik
+
+# Primjer korištenja funkcije:
+rjecnik = {"ime": "Ivan", "prezime": "Ivić", "dob": 25}
+print(obrni_rjecnik(rjecnik))
+
+terminal
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+{'Ivan': 'ime', 'Ivić': 'prezime', 25: 'dob'}
+
