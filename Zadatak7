@@ -1,0 +1,43 @@
+def provjera_lozinke(lozinka):
+    # Provjera duljine lozinkec
+    if len(lozinka) < 8 or len(lozinka) > 15:
+        return "Lozinka mora sadržavati između 8 i 15 znakova"
+    
+    # Provjera da li lozinka sadrži barem jedno veliko slovo i jedan broj
+    if not any(c.isupper() for c in lozinka) or not any(c.isdigit() for c in lozinka):
+        return "Lozinka mora sadržavati barem jedno veliko slovo i jedan broj"
+    
+    # Provjera da li lozinka sadrži "password" ili "lozinka" (neovisno o velikim i malim slovima)
+    if "password" in lozinka.lower() or "lozinka" in lozinka.lower():
+        return "Lozinka ne smije sadržavati riječi 'password' ili 'lozinka'"
+    
+    # Ako lozinka zadovoljava sve uvjete
+    return "Lozinka je jaka!"
+
+# Unos lozinke od korisnika
+lozinka = input("Unesite lozinku: ")
+
+# Pozivanje funkcije za provjeru lozinke
+rezultat = provjera_lozinke(lozinka)
+
+# Ispisivanje rezultata
+print(rezultat)
+
+
+
+
+
+
+terminal
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+Unesite lozinku: Lozinka111
+Lozinka ne smije sadržavati riječi 'password' ili 'lozinka'
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+Unesite lozinku: password111
+Lozinka mora sadržavati barem jedno veliko slovo i jedan broj       
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+Unesite lozinku: sladana
+Lozinka mora sadržavati između 8 i 15 znakova
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+Unesite lozinku: Sladana1
+Lozinka je jaka!
