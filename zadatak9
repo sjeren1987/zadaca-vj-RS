@@ -1,0 +1,23 @@
+def ukloni_duplikate(lista):
+    # Kreiramo prazan skup koji će služiti za pohranu jedinstvenih elemenata
+    pomocni_skup = set()
+    nova_lista = []
+    
+    # Prolazimo kroz svaki element u originalnoj listi
+    for element in lista:
+        # Ako element još nije u skupu, dodajemo ga u novu listu i skup
+        if element not in pomocni_skup:
+            nova_lista.append(element)
+            pomocni_skup.add(element)
+    
+    return nova_lista
+
+# Primjer korištenja funkcije:
+lista = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+print(ukloni_duplikate(lista))  # Ispis: [1, 2, 3, 4, 5]
+
+TERMINAL
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+[1, 2, 3, 4, 5]
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> 
+
