@@ -1,0 +1,24 @@
+def count_vowels_consonants(text):
+    # Definiramo skupove samoglasnika i suglasnika
+    vowels = "aeiouAEIOU"
+    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+    
+    # Inicijaliziramo brojače za samoglasnike i suglasnike
+    vowel_count = 0
+    consonant_count = 0
+    
+    # Prolazimo kroz svaki znak u tekstu
+    for char in text:
+        # Provjeravamo je li znak samoglasnik
+        if char in vowels:
+            vowel_count += 1
+        # Provjeravamo je li znak suglasnik
+        elif char in consonants:
+            consonant_count += 1
+    
+    # Vraćamo rječnik s brojem samoglasnika i suglasnika
+    return {"samoglasnici": vowel_count, "suglasnici": consonant_count}
+
+# Primjeri korištenja:
+tekst = "Python je programski jezik koji je jednostavan"
+print = count_vowels_consonants(tekst)
