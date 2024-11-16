@@ -1,0 +1,27 @@
+def parni_neparni_brojevi(lista):
+    # Kreiramo rječnik s ključevima 'parni' i 'neparni' te praznim listama
+    rezultati = {'parni': [], 'neparni': []}
+    
+    # Prolazimo kroz svaki broj u listi
+    for broj in lista:
+        if broj % 2 == 0:
+            # Ako je broj paran, dodajemo ga u listu 'parni'
+            rezultati['parni'].append(broj)
+        else:
+            # Ako je broj neparan, dodajemo ga u listu 'neparni'
+            rezultati['neparni'].append(broj)
+    
+    return rezultati
+
+# Primjer korištenja funkcije:
+lista_brojeva = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+rezultat = parni_neparni_brojevi(lista_brojeva)
+
+print(rezultat)
+# Ispis: {'parni': [2, 4, 6, 8, 10], 'neparni': [1, 3, 5, 7, 9]}
+
+
+TERMINAl
+
+PS C:\Users\PC\Desktop\rs\raspodjeljeni-sustavi-zada-e-iz-vje-bi-1> & C:/Users/PC/AppData/Local/Programs/Python/Python313/python.exe c:/Users/PC/Desktop/rs/index.py
+{'parni': [2, 4, 6, 8, 10], 'neparni': [1, 3, 5, 7, 9]}
